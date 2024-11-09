@@ -1,0 +1,19 @@
+import = [
+  "/usr/local/lib/node_modules/alacritty-themes/themes/One-Dark.toml"
+]
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
