@@ -7,7 +7,19 @@ return {
           return {
             Visual = { bg = "#ab4242", fg = "#191818" }, -- настройка цвета фона и текста при выделении
             Comment = { fg = "#78B08D" }, -- Комментарии черным цветом
-            LineNr = { fg = "#54546d", bg = "#1f1f28" }, -- Цвет текста и фона для номера линии
+            SignColumn = { bg = "none" }, -- Прозрачный фон для столбца с символами
+            LineNr = { bg = "none" }, -- Прозрачный фон для номеров строк
+
+            NeoTreeTabActive = { bg = "#1f1f28", fg = "none", bold = true }, -- Активная вкладка
+            NeoTreeTabInactive = { bg = "#1f1f28", fg = "#54546d" }, -- Неактивная вкладка
+            NeoTreeTabSeparatorActive = { bg = "#1f1f28", fg = "#1f1f28" }, -- Разделитель вкладок
+            NeoTreeTabSeparatorInactive = { bg = "#1f1f28", fg = "#1f1f28" }, -- Разделитель вкладок
+            WinSeparator = { fg = "#191824", bg = "none" }, -- Цвет рамки
+            TelescopeBorder = { fg = "#6077a6", bg = "none" }, -- Цвет рамки
+
+            GitSignsAdd = { fg = "#a3be8c", bg = "none" }, -- Добавлено
+            GitSignsChange = { fg = "#d8a657", bg = "none" }, -- Изменено
+            GitSignsDelete = { fg = "#ec7279", bg = "none" }, -- Удалено
           }
         end,
       })
@@ -50,5 +62,4 @@ return {
       -- },
     },
   },
-  
 }
