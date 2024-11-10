@@ -10,10 +10,14 @@ return {
             SignColumn = { bg = "none" }, -- Прозрачный фон для столбца с символами
             LineNr = { bg = "none" }, -- Прозрачный фон для номеров строк
 
-            NeoTreeTabActive = { bg = "#1f1f28", fg = "none", bold = true }, -- Активная вкладка
-            NeoTreeTabInactive = { bg = "#1f1f28", fg = "#54546d" }, -- Неактивная вкладка
-            NeoTreeTabSeparatorActive = { bg = "#1f1f28", fg = "#1f1f28" }, -- Разделитель вкладок
-            NeoTreeTabSeparatorInactive = { bg = "#1f1f28", fg = "#1f1f28" }, -- Разделитель вкладок
+            -- NeoTreeNormal = { bg = "#1a1b26", fg = "#c0caf5" }, -- Цвет основного фона и текста
+            -- NeoTreeNormalNC = { bg = "#1a1b26", fg = "#54546d" }, -- Цвет для неактивных
+
+            NeoTreeTabActive = { bg = "#17171e", fg = "none", bold = true }, -- Активная вкладка
+            NeoTreeTabInactive = { bg = "#17171e", fg = "#54546d" }, -- Неактивная вкладка
+            NeoTreeTabSeparatorActive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
+            NeoTreeTabSeparatorInactive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
+
             WinSeparator = { fg = "#191824", bg = "none" }, -- Цвет рамки
             TelescopeBorder = { fg = "#6077a6", bg = "none" }, -- Цвет рамки
 
