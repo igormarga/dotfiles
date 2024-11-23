@@ -13,6 +13,8 @@ return {
       diagnostics = {
         underline = true,
         update_in_insert = true,
+        severity_sort = true,
+        -- virtual_text = false,
         virtual_text = {
           spacing = 4,
           source = "if_many",
@@ -21,7 +23,7 @@ return {
           -- this only works on a recent 0.10.0 build. Will be set to "●" when not supported
           -- prefix = "icons",
         },
-        severity_sort = true,
+        -- signs = false,
         signs = {
           text = {
             [vim.diagnostic.severity.ERROR] = LazyVim.config.icons.diagnostics.Error,

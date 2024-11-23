@@ -42,23 +42,22 @@ return {
   config = function()
     vim.opt.laststatus = 3
     local lualine = require("lualine")
-    setup_macro_refresh(lualine)
+    -- setup_macro_refresh(lualine)
     lualine.setup({
       options = {
-        theme = "rose-pine",
         component_separators = "",
         -- section_separators = { left = "", right = "" },
         disabled_filetypes = { "alpha" },
       },
       sections = {
-        lualine_a = {
-          {
-            "mode",
-            -- separator = { left = "", right = "" },
-            -- right_padding = 2
-          },
-          macro_recording_status(),
-        },
+        -- lualine_a = {
+        --   {
+        --     "mode",
+        --     -- separator = { left = "", right = "" },
+        --     -- right_padding = 2
+        --   },
+        --   macro_recording_status(),
+        -- },
         lualine_b = {
           "branch",
           "diff",
