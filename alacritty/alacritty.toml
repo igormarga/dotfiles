@@ -6,19 +6,19 @@ offset.y = 2
 glyph_offset.y = 2 
 
 [font.normal]
-family = "SauceCodePro Nerd Font"
+family = "Hack Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "SauceCodePro Nerd Font"
+family = "Hack Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "SauceCodePro Nerd Font"
+family = "Hack Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "SauceCodePro Nerd Font"
+family = "Hack Nerd Font"
 style = "Bold Italic"
 
 [window]
@@ -29,9 +29,9 @@ padding = { x = 2, y = 2 }
 [keyboard]
 bindings = [
   { key = "Left", mods = "Super", chars = "\u001BB" },
-  { key = "Right", mods = "Super", chars = "\u001BF" }
+  { key = "Right", mods = "Super", chars = "\u001BF" },
 ]
 
 [colors]
-  [colors.primary]
-    background = '#1f1f28' 
+[colors.primary]
+background = '#1f1f28'

@@ -69,6 +69,11 @@ return {
       -- LSP Server Settings
       ---@type lspconfig.options
       servers = {
+        eslint = {
+          settings = {
+            workingDirectory = { mode = "auto" }
+          },
+        },
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
           -- Use this to add any additional keymaps
