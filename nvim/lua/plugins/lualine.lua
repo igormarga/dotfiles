@@ -1,27 +1,3 @@
-local function setup_macro_refresh(lualine)
-  vim.api.nvim_create_autocmd("RecordingEnter", {
-    callback = function()
-      lualine.refresh({
-        place = { "statusline" },
-      })
-    end,
-  })
-  vim.api.nvim_create_autocmd("RecordingLeave", {
-    callback = function()
-      local timer = vim.loop.new_timer()
-      timer:start(
-        50,
-        0,
-        vim.schedule_wrap(function()
-          lualine.refresh({
-            place = { "statusline" },
-          })
-        end)
-      )
-    end,
-  })
-end
-
 local function macro_recording_status()
   local function current_status()
     local register = vim.fn.reg_recording()
@@ -35,32 +11,25 @@ return {
   event = "VeryLazy",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
+    "SmiteshP/nvim-navic", -- Зависимость для navic
   },
   init = function()
-    vim.opt.laststatus = 0
+    vim.opt.laststatus = 3 -- Глобальный статусбар
   end,
   config = function()
-    vim.opt.laststatus = 3
     local lualine = require("lualine")
-    -- setup_macro_refresh(lualine)
-    lualine.setup({
+    -- local icons = LazyVim.config.icons
+
+    local opts = {
       options = {
         component_separators = "",
-        -- section_separators = { left = "", right = "" },
-        disabled_filetypes = { "alpha" },
+        disabled_filetypes = { "alpha", "NvimTree", "neo-tree" },
       },
       sections = {
-        -- lualine_a = {
-        --   {
-        --     "mode",
-        --     -- separator = { left = "", right = "" },
-        --     -- right_padding = 2
-        --   },
-        --   macro_recording_status(),
-        -- },
         lualine_b = {
           "branch",
           "diff",
+
           "diagnostics",
         },
         lualine_c = { "filename" },
@@ -70,7 +39,39 @@ return {
           { "location", separator = { right = "", left = "" } },
         },
       },
+      winbar = {
+        -- lualine_a = { "filename" }, -- Имя файла в winbar
+        lualine_b = {
+          -- LazyVim.lualine.root_dir(),
+          -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+          { LazyVim.lualine.pretty_path({ length = 10 }) },
+        },
+      },
+      inactive_winbar = {
+        lualine_a = { "filename" },
+        lualine_b = { "navic" },
+      },
       extensions = { "nvim-tree", "fzf" },
-    })
+    }
+
+    -- if vim.g.trouble_lualine and LazyVim.has("trouble.nvim") then
+    --   local trouble = require("trouble")
+    --   local symbols = trouble.statusline({
+    --     mode = "symbols",
+    --     groups = {},
+    --     title = false,
+    --     filter = { range = true },
+    --     format = "{kind_icon}{symbol.name:Normal}",
+    --     hl_group = "lualine_c_normal",
+    --   })
+    --   table.insert(opts.winbar.lualine_b, {
+    --     symbols and symbols.get,
+    --     cond = function()
+    --       return vim.b.trouble_lualine ~= false and symbols.has()
+    --     end,
+    --   })
+    -- end
+
+    lualine.setup(opts)
   end,
 }

@@ -66,4 +66,4 @@ vim.o.autoindent = true
 vim.o.smartindent = true
 vim.o.smarttab = true
 
-vim.opt.updatetime = 50
+-- vim.opt.updatetime = 50
