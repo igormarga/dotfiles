@@ -4,10 +4,9 @@ return {
     source_selector = {
       winbar = true,
       statusline = false,
-      padding = 0;
+      padding = 0,
       sources = {
-                { source = "filesystem", display_name = "   󰉓 Files" },
-
+        { source = "filesystem", display_name = "   󰉓 Files" },
         { source = "buffers", display_name = "  Buffers" },
         { source = "git_status", display_name = "   Git" },
       },
@@ -23,13 +22,13 @@ return {
           ".DS_Store",
           "thumbs.db",
         },
-        never_show = {
-          ".git",
-        },
+        -- never_show = {
+        --   ".git",
+        -- },
       },
     },
     window = {
-      position = "left",
+      position = "float",
       mappings = {},
       title = {
         text = "Explorer",

@@ -8,11 +8,10 @@ vim.g.mapleader = " "
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.guicursor = {
-  'n-v-c:block',
-  'i:ver50',
-  'r-cr:hor20',
+  "n-v-c:block",
+  "i:ver50",
+  "r-cr:hor20",
 }
-
 
 vim.opt.number = true
 
@@ -56,14 +55,19 @@ if vim.fn.has("nvim-0.8") == 1 then
   vim.opt.cmdheight = 0
 end
 
-vim.g.autoformat = false;
+vim.g.autoformat = false
 
 vim.g.neovide_line_spacing = 10
+vim.g.editorconfig = true
 
-vim.cmd('autocmd BufRead,BufNewFile *.hbs set filetype=html')
+vim.cmd("autocmd BufRead,BufNewFile *.hbs set filetype=html")
 
 vim.o.autoindent = true
 vim.o.smartindent = true
 vim.o.smarttab = true
 
--- vim.opt.updatetime = 50
+vim.opt.updatetime = 50
+vim.opt.mouse = ""
+
+-- vim.opt.fillchars = "vert:┃,horiz:━,verthoriz:╋,horizup:┻,horizdown:┳,vertleft:┫,vertright:┣,eob: " -- more obvious separator
+

@@ -71,7 +71,7 @@ return {
       servers = {
         eslint = {
           settings = {
-            workingDirectory = { mode = "auto" }
+            workingDirectory = { mode = "auto" },
           },
         },
         lua_ls = {
@@ -84,6 +84,10 @@ return {
             Lua = {
               workspace = {
                 checkThirdParty = false,
+                telemetry = { enable = false },
+                library = {
+                    "${3rd}/love2d/library"
+                }
               },
               codeLens = {
                 enable = true,
