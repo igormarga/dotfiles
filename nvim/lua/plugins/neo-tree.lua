@@ -6,9 +6,8 @@ return {
       statusline = false,
       padding = 0,
       sources = {
-        { source = "filesystem", display_name = "   󰉓 Files" },
-        { source = "buffers", display_name = "  Buffers" },
-        { source = "git_status", display_name = "   Git" },
+        { source = "filesystem", display_name = "  󰉓 Files" },
+        { source = "git_status", display_name = "     Git status  " },
       },
     },
     filesystem = {
@@ -28,7 +27,7 @@ return {
       },
     },
     window = {
-      position = "float",
+      position = "left",
       mappings = {},
       title = {
         text = "Explorer",

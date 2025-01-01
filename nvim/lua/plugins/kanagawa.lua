@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 return {
   {
     "rebelot/kanagawa.nvim",
@@ -12,10 +13,10 @@ return {
             -- NeoTreeNormal = { bg = "#1a1b26", fg = "#c0caf5" }, -- Цвет основного фона и текста
             -- NeoTreeNormalNC = { bg = "#1a1b26", fg = "#54546d" }, -- Цвет для неактивных
 
-            NeoTreeTabActive = { bg = "#17171e", fg = "none", bold = true }, -- Активная вкладка
-            NeoTreeTabInactive = { bg = "#17171e", fg = "#54546d" }, -- Неактивная вкладка
-            NeoTreeTabSeparatorActive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
-            NeoTreeTabSeparatorInactive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
+            NeoTreeTabActive = { bg = "none", fg = "none", bold = true }, -- Активная вкладка
+            NeoTreeTabInactive = { bg = "none", fg = "#54546d" }, -- Неактивная вкладка
+            -- NeoTreeTabSeparatorActive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
+            -- NeoTreeTabSeparatorInactive = { bg = "#17171e", fg = "#17171e" }, -- Разделитель вкладок
             --
             DiagnosticSignError = { bg = "none" },
             DiagnosticSignWarn = { bg = "none" },

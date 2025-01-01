@@ -13,5 +13,6 @@ return {
         readonly_icon = " 󰌾 ",
       }),
     }
+    opts.sections.lualine_c = nil
   end,
 }
