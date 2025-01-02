@@ -12,3 +12,4 @@
 - [ ] Resize windows on neo-tree hiding
 - [ ] Calculator plugin
 - [ ] Fix "norm" preview
+- [ ] Better tabs for kitty
