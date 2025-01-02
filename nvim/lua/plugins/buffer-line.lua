@@ -3,7 +3,7 @@ return {
   "akinsho/bufferline.nvim",
   opts = function()
     require("bufferline").setup({
-      options = {
+     options = {
         -- separator_style = "thick",
         always_show_bufferline = true, -- Добавляем эту строку
       },
@@ -17,36 +17,36 @@ return {
 
     return {
       options = {
-      show_buffer_close_icons = false,
-      close_command = function(n)
-        Snacks.bufdelete(n)
-      end,
+        show_buffer_close_icons = false,
+        close_command = function(n)
+          Snacks.bufdelete(n)
+        end,
       -- stylua: ignore
-      right_mouse_command = function(n) Snacks.bufdelete(n) end,
-      diagnostics = "nvim_lsp",
-      always_show_bufferline = true,
-      diagnostics_indicator = function(_, _, diag)
-        local icons = LazyVim.config.icons.diagnostics
-        local ret = (diag.error and icons.Error .. diag.error .. " " or "")
-          .. (diag.warning and icons.Warn .. diag.warning or "")
-        return vim.trim(ret)
-      end,
-      offsets = {
-        {
-          filetype = "neo-tree",
-          text = function()
-            local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":t")
-            -- local ext = vim.fn.fnamemodify(filename, ":e") -- Получить расширение файла
-            local text = "󰲂" .. " " .. filename
+        right_mouse_command = function(n) Snacks.bufdelete(n) end,
+        diagnostics = "nvim_lsp",
+        always_show_bufferline = true,
+        diagnostics_indicator = function(_, _, diag)
+          local icons = LazyVim.config.icons.diagnostics
+          local ret = (diag.error and icons.Error .. diag.error .. " " or "")
+            .. (diag.warning and icons.Warn .. diag.warning or "")
+          return vim.trim(ret)
+        end,
+        offsets = {
+          {
+            filetype = "neo-tree",
+            text = function()
+              local filename = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), ":t")
+              -- local ext = vim.fn.fnamemodify(filename, ":e") -- Получить расширение файла
+              local text = "󰲂" .. " " .. filename
 
-            -- local icon = require("nvim-web-devicons").get_icon(filename, ext)
+              -- local icon = require("nvim-web-devicons").get_icon(filename, ext)
 
-            -- if string.find(filename, "filesystem") then
-            text = "~" .. " Project files "
+              -- if string.find(filename, "filesystem") then
+              text = "~" .. " Project files "
 
-            if string.find(filename, "git_status") then
-              text = "" .. " Changes "
-            end
+              if string.find(filename, "git_status") then
+                text = "" .. " Changes "
+              end
               -- elseif icon then
               --   text = icon .. " " .. filename
               -- end
@@ -55,7 +55,8 @@ return {
             end,
             highlight = "Directory",
             text_align = "left",
-            separator = "|",
+            separator = "╭",
+            -- separator = "█",
           },
         },
         ---@param opts bufferline.IconFetcherOpts

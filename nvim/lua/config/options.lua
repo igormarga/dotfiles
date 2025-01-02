@@ -66,8 +66,8 @@ vim.o.autoindent = true
 vim.o.smartindent = true
 vim.o.smarttab = true
 
-vim.opt.updatetime = 50
+-- vim.opt.updatetime = 50
 vim.opt.mouse = ""
-
+-- vim.opt.fillchars = "vert:⎟,horiz:━,verthoriz:╋,horizup:┻,horizdown:┳,vertleft:┫,vertright:█,eob: " -- more obvious separator
 vim.opt.fillchars = "vert:┃,horiz:━,verthoriz:╋,horizup:┻,horizdown:┳,vertleft:┫,vertright:┣,eob: " -- more obvious separator
 

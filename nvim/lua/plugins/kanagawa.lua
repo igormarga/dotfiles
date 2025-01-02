@@ -7,7 +7,7 @@ return {
         overrides = function()
           return {
             Visual = { bg = "#ab4242", fg = "#191818" },
-            Comment = { fg = "#78B08D" },
+            -- Comment = { fg = "#78B08D" },
             LineNr = { bg = "#1f1f28" }, -- Прозрачный фон для номеров строк
             CursorLineNr = { bg = "#1f1f28" },
             -- NeoTreeNormal = { bg = "#1a1b26", fg = "#c0caf5" }, -- Цвет основного фона и текста

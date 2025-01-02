@@ -26,14 +26,5 @@ return {
         -- },
       },
     },
-    window = {
-      position = "left",
-      mappings = {},
-      title = {
-        text = "Explorer",
-        highlight = "NeoTreeTitle",
-        align = "center",
-      },
-    },
   },
 }

@@ -1,4 +1,14 @@
-# 💤 LazyVim
+# neovim config
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## TODO
+
+- [ ] Auto session restore on enter
+- [ ] Better dashboard
+- [ ] Bufferline styling
+- [ ] Plugins directory refactoring, folders like: Utils, Editor, UI, etc.
+- [ ] glsl LSP
+- [ ] MD files preview
+- [ ] Multicursor plugin
+- [ ] Resize windows on neo-tree hiding
+- [ ] Calculator plugin
+- [ ] Fix "norm" preview
