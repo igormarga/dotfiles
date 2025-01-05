@@ -59,3 +59,13 @@ keymap.set({ "n", "i", "v" }, "<Up>", no_arrow, opts)
 keymap.set({ "n", "i", "v" }, "<Down>", no_arrow, opts)
 keymap.set({ "n", "i", "v" }, "<Left>", no_arrow, opts)
 keymap.set({ "n", "i", "v" }, "<Right>", no_arrow, opts)
+
+-- Calculate at cursor
+keymap.set("i", "<C-c>", function()
+  vim.ui.input({ prompt = "󰪚 Calculator: " }, function(input)
+    local calc = load("return " .. (input or ""))()
+    if (calc) then
+      vim.api.nvim_feedkeys(tostring(calc), "i", true)
+    end
+  end)
+end)

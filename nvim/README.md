@@ -13,3 +13,4 @@
 - [ ] Calculator plugin
 - [ ] Fix "norm" preview
 - [ ] Better tabs for kitty
+- [ ] Lens nvim automatic resize windows https://github.com/camspiers/lens.vim

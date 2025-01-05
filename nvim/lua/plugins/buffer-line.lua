@@ -55,7 +55,7 @@ return {
             end,
             highlight = "Directory",
             text_align = "left",
-            separator = "╭",
+            separator = "┃",
             -- separator = "█",
           },
         },
