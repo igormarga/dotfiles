@@ -9,6 +9,7 @@ return {
   opts = {
     show_modified = false,
     show_navic = false,
+
     --
     -- attach_navic = true,
     -- configurations go here
@@ -24,7 +25,11 @@ return {
       separator = "", -- Заменяем `>` на `➜` или другой символ
     },
     theme = {
-      normal = { fg = "#808080", bg = "NONE" }, -- Серый цвет текста
+      normal = {
+        fg = "#808080",
+        bg = "NONE",
+      }, -- Серый цвет текста
+
       ellipsis = { fg = "#808080", bg = "NONE" }, -- Для многоточия
       separator = { fg = "#808080", bg = "NONE" }, -- Для разделителей
       dirname = { fg = "#808080", bg = "NONE" }, -- Цвет для директории

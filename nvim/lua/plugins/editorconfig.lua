@@ -1,7 +1,7 @@
 return {
-  -- другие плагины
   {
-    "editorconfig/editorconfig-vim",
-    event = "VeryLazy", -- загружается только при необходимости
+    "gpanders/editorconfig.nvim",
+    enabled = false
+    -- event = "VeryLazy", -- загружается только при необходимости
   },
 }

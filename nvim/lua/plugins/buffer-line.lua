@@ -1,23 +1,63 @@
 ---@diagnostic disable: duplicate-set-field
 return {
   "akinsho/bufferline.nvim",
+  version = "*",
+  dependencies = "nvim-tree/nvim-web-devicons",
   opts = function()
     require("bufferline").setup({
-     options = {
+      options = {
         -- separator_style = "thick",
-        always_show_bufferline = true, -- Добавляем эту строку
+        always_show_bufferline = true,
       },
       highlights = {
         offset_separator = {
-          bg = "none",
-          fg = "#17171e",
+
+          bg = "#121216",
+          fg = "#121216",
+        },
+
+        pick_selected = {
+          bg = "#ff3222",
+          fg = "#ff1216",
+        },
+        --
+        -- indicator_selected = {
+        --   bg = "#ff3222",
+        --   fg = "#ff1216",
+        -- },
+        background = {
+          bold = false,
+          sp = "#121216", -- Цвет границы (полоска слева)
+          italic = false,
+                    sp = "#17171e", -- Цвет границы (полоска слева)
+          underline= true
+
+        },
+        buffer_selected = {
+          bold = false,
+          italic = false,
+          sp = "#17171e", -- Цвет границы (полоска слева)
+        },
+        buffer_visible = {
+          bold = false,
+          italic = false,
+
+          sp = "#121216", -- Цвет границы (полоска слева)
         },
       },
     })
 
     return {
       options = {
+        separator_style = "thin", -- Первый символ - слева, второй - справа
+
         show_buffer_close_icons = false,
+        show_tab_indicators = false,
+
+        indicator = {
+          style = "none"
+        },
+
         close_command = function(n)
           Snacks.bufdelete(n)
         end,
@@ -53,10 +93,10 @@ return {
 
               return text
             end,
-            highlight = "Directory",
+            highlight = "TreeTitle",
             text_align = "left",
-            separator = "┃",
-            -- separator = "█",
+            -- separator = " ",
+            separator = " ",
           },
         },
         ---@param opts bufferline.IconFetcherOpts
@@ -65,11 +105,5 @@ return {
         end,
       },
     }
-    --   options = {
-    --     show_buffer_close_icons = false,
-    --     -- separator_style = { "<", ">" },
-    --     always_show_bufferline = true, -- Добавляем эту строку
-    --   }
-    -- }
   end,
 }

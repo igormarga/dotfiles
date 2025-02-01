@@ -2,8 +2,8 @@ return {
   {
     "mg979/vim-visual-multi",
     branch = "master",
+    enabled = false,
     config = function()
-      -- Здесь можно добавить настройки, если нужно
     end,
   },
 }

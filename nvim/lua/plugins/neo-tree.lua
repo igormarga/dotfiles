@@ -2,13 +2,9 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   opts = {
     source_selector = {
-      winbar = true,
       statusline = false,
       padding = 0,
-      sources = {
-        { source = "filesystem", display_name = "  󰉓 Files" },
-        { source = "git_status", display_name = "     Git status  " },
-      },
+      separator = " ",
     },
     filesystem = {
       filtered_items = {
