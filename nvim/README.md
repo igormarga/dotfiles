@@ -4,13 +4,13 @@
 
 - [ ] Auto session restore on enter
 - [ ] Better dashboard
-- [ ] Bufferline styling
+- [x] Bufferline styling
 - [ ] Plugins directory refactoring, folders like: Utils, Editor, UI, etc.
 - [ ] glsl LSP
-- [ ] MD files preview
-- [ ] Multicursor plugin
+- [x] MD files preview
+- [x] Multicursor plugin
 - [ ] Resize windows on neo-tree hiding
-- [ ] Calculator plugin
+- [x] Calculator plugin
 - [ ] Fix "norm" preview
-- [ ] Better tabs for kitty
+- [x] Better tabs for kitty
 - [ ] Lens nvim automatic resize windows https://github.com/camspiers/lens.vim
