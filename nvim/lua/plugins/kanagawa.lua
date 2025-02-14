@@ -28,6 +28,8 @@ return {
               fg = "#d8a657",
             },
 
+            BufferLineIconInactive = { fg = "#fff000", bg = "#fff000"},
+
             WinSeparator = { fg = "#17171e", bg = "none" }, -- Цвет рамки TelescopeBorder = { fg = "#6077a6", bg = "none" }, -- Цвет рамки
 
             GitSignsAdd = { fg = "#a3be8c", bg = "none" }, -- Добавлено

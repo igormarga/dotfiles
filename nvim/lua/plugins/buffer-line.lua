@@ -11,7 +11,6 @@ return {
       },
       highlights = {
         offset_separator = {
-
           bg = "#121216",
           fg = "#121216",
         },
@@ -20,23 +19,17 @@ return {
           bg = "#ff3222",
           fg = "#ff1216",
         },
-        --
-        -- indicator_selected = {
-        --   bg = "#ff3222",
-        --   fg = "#ff1216",
-        -- },
         background = {
-          bold = false,
-          sp = "#121216", -- Цвет границы (полоска слева)
+          -- bold = true,
           italic = false,
-                    sp = "#17171e", -- Цвет границы (полоска слева)
-          underline= true
-
+          -- sp = "#121216", -- Цвет границы (полоска слева)
+          -- underline = true,
         },
         buffer_selected = {
           bold = false,
           italic = false,
           sp = "#17171e", -- Цвет границы (полоска слева)
+          fg = "#dcd7ba",
         },
         buffer_visible = {
           bold = false,
@@ -55,7 +48,7 @@ return {
         show_tab_indicators = false,
 
         indicator = {
-          style = "none"
+          style = "none",
         },
 
         close_command = function(n)
@@ -101,7 +94,15 @@ return {
         },
         ---@param opts bufferline.IconFetcherOpts
         get_element_icon = function(opts)
-          return LazyVim.config.icons.ft[opts.filetype]
+          local icon, hl = require("nvim-web-devicons").get_icon(opts.path, opts.filetype, { default = true })
+
+          -- Проверяем, активна ли вкладка (буфер является текущим)
+          local is_active = vim.api.nvim_get_current_buf() == vim.fn.bufnr(opts.path)
+
+          -- Если вкладка активна, используем стандартный hl, иначе даём свой
+          if icon then
+            return icon, is_active and hl or "Comment"
+          end
         end,
       },
     }

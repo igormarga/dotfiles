@@ -33,7 +33,7 @@ return {
       ellipsis = { fg = "#808080", bg = "NONE" }, -- Для многоточия
       separator = { fg = "#808080", bg = "NONE" }, -- Для разделителей
       dirname = { fg = "#808080", bg = "NONE" }, -- Цвет для директории
-      basename = { fg = "#D0D0D0", bg = "NONE" }, -- Цвет для имени файла
+      basename = { fg = "#dcd7ba", bg = "NONE" }, -- Цвет для имени файла
       context = { fg = "#808080", bg = "NONE" }, -- Цвет для контекста (если используется navic)
     },
   },
