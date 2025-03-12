@@ -73,3 +73,21 @@ vim.o.smarttab = true
 vim.opt.fillchars = "vert:▕,verthoriz: ,horizup: ,horizdown: ,vertleft: ,vertright: ,eob: " -- more obvious separator
 
 -- vim.opt.fillchars = "vert:▕,verthoriz: ,horizup: ,horizdown: ,vertleft: ,vertright: ,eob: " -- more obvious separator
+
+local h = vim.lsp.handlers["textDocument/diagnostic"]
+vim.lsp.handlers["textDocument/diagnostic"] = function(err, method, params, client_id)
+  if err then
+    if err.code == -32603 then
+      return
+    end
+  end
+
+  return h(err, method, params, client_id)
+end
+
+-- vim.lsp.handlers["window/showMessage"] = function(err, method, params, client_id)
+--   if params and params.message and params.message:match("Could not find config file") then
+--     return
+--   end
+--   return vim.lsp.handlers["window/showMessage"](err, method, params, client_id)
+-- end

@@ -11,15 +11,14 @@ return {
       },
     },
     routes = {
-      {
-        filter = {
-          event = "msg_show", -- Уведомления от LSP
-          any = {
-            { find = "Could not find config file" },
-          },
+      filter = {
+        event = "lsp",
+        kind = "notify",
+        any = {
+          { find = "Could not find config file" },
         },
-        opts = { skip = true }, -- Пропускаем это сообщение
       },
+      opts = { skip = true },
       {
         filter = {
           event = "msg_show",
